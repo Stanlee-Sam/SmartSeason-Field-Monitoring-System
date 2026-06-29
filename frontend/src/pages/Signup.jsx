@@ -4,22 +4,18 @@ import { useState } from "react";
 import { ClipLoader } from "react-spinners";
 import { toast } from "sonner";
 import api from "../lib/api";
-import { useNavigate } from "react-router-dom";
-
+import { Link, useNavigate } from "react-router-dom";
 
 const Signup = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
-    const navigate = useNavigate();
-
+  const navigate = useNavigate();
 
   const handleNameChange = (e) => {
     setName(e.target.value);
   };
-
-
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
@@ -186,12 +182,12 @@ const Signup = () => {
               Already have an account?
             </p>
 
-            <a
-              href="/"
+            <Link
+              to="/"
               className="text-primary text-[13px] transition-colors hover:text-tertiary"
             >
               Sign In
-            </a>
+            </Link>
           </div>
         </div>
       </div>

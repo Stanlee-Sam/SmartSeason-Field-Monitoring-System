@@ -3,7 +3,7 @@ import { useState } from "react";
 import { toast } from "sonner";
 import axios from "axios";
 import { ClipLoader } from "react-spinners";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import api from "../lib/api";
 
 const Login = () => {
@@ -167,12 +167,12 @@ const Login = () => {
               Don&apos;t have an account?
             </p>
 
-            <a
-              href="/signup"
+            <Link
+              to="/signup"
               className="text-primary text-[13px] transition-colors hover:text-tertiary"
             >
               Sign up
-            </a>
+            </Link>
           </div>
         </div>
       </div>
